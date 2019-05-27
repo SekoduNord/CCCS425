@@ -111,8 +111,8 @@ public class Assignment1Client {
     }
 
     /**
-     *Help is used to give some information to the user about the different functionality and how to use them.
-     * There is no HTTP command in this command
+     *Help is used to give some information to the user about the different functionalities and how to use them.
+     * There is no HTTP command in this function.
      */
     public static void help() {
         System.out.println("This applictation use the server located at \n"
@@ -124,6 +124,7 @@ public class Assignment1Client {
     /**
      * 
      *List is used to request a list of all books currently inside the library.
+     *If not book is present, the method return "Library empty".
      * This an HTTP GET command
      */
     public static void list() {
@@ -139,8 +140,9 @@ public class Assignment1Client {
 
     /**
      * 
-     * Display is used to display a specific book from the library. The primary for this book must be supplied.
+     * Display is used to show a specific book from the library. The primary key for this book must be supplied.
      * This an HTTP GET command
+     * If the book is not found the method return "Book not found".
      * @param id primary for the book requested
      */
     public static void display(int id) {
